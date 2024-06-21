@@ -10,6 +10,9 @@ public class CashRegister {
 		// NOW COMMDAND S AND IT'S SAVED
 		Scanner Keyboard = new Scanner(System.in);
 		
+		System.out.println("Enter the price; ");
+		double price = Keyboard.nextDouble ();
+		System.out.println("Price: " + price);
 		
 		
 		Keyboard.close();

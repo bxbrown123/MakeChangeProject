@@ -2,37 +2,60 @@ package com.skilldistillery.makechange;
 import java.util.Scanner;
 public class CashRegister {
 	public static void main(String[] args) {
-		Scanner userInput = new Scanner(System.in);
-		
-		//double cost = 0.0;
-		//double payment = 0.0;
-		//double number = 0.0;
+		Scanner userInput = new Scanner(System.in); 
 		
 //User Story #1-The user is prompted asking for the price of the item.
-		System.out.println("How much is the item?");        // Question.
-		double cost = userInput.nextDouble ();              // Answer.
+		System.out.println("How much is the item?");        
+		double cost = userInput.nextDouble ();              
 //User Story #2-The user is then prompted asking how much money was tendered by the customer.
-		System.out.println("How much are you paying?");     // Question.
-		double payment = userInput.nextDouble ();		    // Answer.
-//User Story #3-Display an appropriate message if the customer provided too little money.
-		//System.err.println("You have provide insufficient funds.");
-//User Story #3a-Display an appropriate message if the customer provided the exact amount.	
-		//System.out.println("Thank you for your purchase!");
-//User Story #4-If the amount tendered is more than the cost of the item, display the number of bills and coins that should be given to the customer. 		
-		if (payment > cost) 
-		{System.out.println("There's a snake in my boot.");} // place holder until formula.
+		System.out.println("How much are you paying?");     
+		double payment = userInput.nextDouble ();		  
+
+		// if  customer gives exact amount
+		if(payment == cost) 
+		{System.out.println("Thank you for your purchase!");} // Say thank you.
+		// if customer gives less than the amount
 		else if (payment < cost) 
 		{System.err.println("You have provided insufficient funds.");} // This is an error.
-		else if (payment == cost) 
-		{System.out.println("Thank you for your purchase!");} // Say thank you.
-		userInput.close();
+		
+	
+		//else if( payment > cost);
+		//{             }  // payment =50 cost = 20    step 1
+	
+		//User Story #4-If the amount tendered is more than the cost of the item, display the number of bills and coins that should be given to the customer. 			
+//		{System.out.println( payment - cost);} // place holder until formula. step 2  30 dollars
+//		
+//		changeDue = (payment - cost); // go through each line until you give all that you owe
+//		 if (changeDue / 20 >= 1) {
+//		int bills  = (int)(changeDue/20) //we are using int for typecast change to int we want a whole number
+//			changeDue = (changeDue - 20); // not hard coding you are doing bills x 20 and we'll be repeating the formula from earlier with the rest
+		 
+		//run this first before you go to next sections
+		 //if (changeDue / 10 >= 1
+		 //if (ChangeDue / 05  >=1
+		 //if (ChangeDue / 01 >=1
+		// if ChangeDue / .25 >=1
+		//if ChangeDue / .10 >=1
+		// if ChangeDue / .05 >=1
+		 //if ChangeDue / .01 >=1
+//User Story #3-Display an appropriate message if the customer provided too little money.//System.err.println("You have provide insufficient funds.");
+		
+//User Story #3a-Display an appropriate message if the customer provided the exact amount.	//System.out.println("Thank you for your purchase!");
+		
+		}	
+	
 	}
-}
 
+
+	 
+// Step 1 do i need to give change? line 19
+// Step 2 figure how much is total change  line 21
+// step 3 figure out how many of each bill/coin to give line 24
 
 //Overview
 //In the cash register we will calculate the amount of change returned to a customer based on the purchase price and the amount tendered. 
-//We will also notify the attendant how many of each type of currency ($20 ,$10 ,$5 ,$1, .25c, .10c, .05c, .01c) is needed to make the change for the customer.
+//We will also notify the attendant how many of each type of currency ($20 ,$10 ,$5 ,$1, .25c, .10c, .05c, .01c) is needed to make the 
+//change for the customer.
 //Change will be provided using a combination of the largest bill and coin denominations as possible.
 //Denominations that are not used will not be displayed.Hint: Mod operator
 

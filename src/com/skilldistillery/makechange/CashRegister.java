@@ -17,11 +17,96 @@ public class CashRegister {
 		// if customer gives less than the amount
 		else if (payment < cost) 
 		{System.err.println("You have provided insufficient funds.");} // This is an error.
+		else { 
+		double changeDue = (payment - cost); 
+		System.out.println(changeDue);
+		 
+		if (changeDue >= 20){
+			int counter = (int)(changeDue / 20);
+			changeDue -= counter * 20;
+			System.out.println("change due in twenties " + counter );
+		}
 		
+		if (changeDue >= 10){
+			int counter = (int)(changeDue / 10);
+			changeDue -= counter * 10;
+			System.out.println("change due in tens " + counter );
+		}
+		
+		if (changeDue >= 5){
+			int counter = (int)(changeDue / 5);
+			changeDue -= counter * 5;
+			System.out.println("change due in five " + counter );
+		}
+		
+		if (changeDue >= 1){
+			int counter = (int)(changeDue / 1);
+			changeDue -= counter * 1;
+			System.out.println("change due in ones " + counter );
+		}
+		
+		if (changeDue >= .25){
+			int counter = (int)(changeDue / .25);
+			changeDue -= counter * .25;
+			System.out.println("change due in quarter " + counter );
+		}
+		
+		if (changeDue >= .10){
+			int counter = (int)(changeDue / .10);
+			changeDue -= counter * .10;
+			System.out.println("change due in dime " + counter );
+		}
+		
+		if (changeDue >= .05){
+			int counter = (int)(changeDue / .05);
+			changeDue -= counter * .05;
+			System.out.println("change due in nickels " + counter );
+		}
+		
+		if (changeDue >= .01){
+			int counter = (int)(changeDue / .01);
+			changeDue -= counter * .01;
+			System.out.println("change due in pennies " + counter );
+		}
+		
+		 
+		 
+		 
+		 //{ if (changeDue / 20)                        //the denom answer / 20 then previous answer/ 10	
+		}	
+			
+			
+		userInput.close();	
+			
+		}
+			
+}
+		
+//		else if (payment > cost);
+//		{ double twenty = 20.00, ten = 10.00, five = 5.00, one = 1.00, quarter = .25, nickel = .05, penny = 0.01; 
+//	//handTwenty = , handTen = 0.0, handFive = 0.0 , handOne = 0.0, handQuarter = 0.0, handNickel = 0.0, handPenny = 0.0;
+//		double change = (payment - cost);  // payment 30.50 - cost 20.00
+//		if (change % 20 == 0);
+//		
 	
-		//else if( payment > cost);
-		//{             }  // payment =50 cost = 20    step 1
+			
 	
+		
+//		double changeDue = (payment - cost);  // payment 30.50 - cost 20.00
+//		 if  (changeDue / 20 >=1);
+//		{System.out.println("your change is " + changeDue);}
+//		if  (changeDue / 10 >=1);
+//		{System.out.println("your change is " + changeDue);}
+//		
+//			
+				
+		
+			
+			
+	 
+		
+		
+		
 		//User Story #4-If the amount tendered is more than the cost of the item, display the number of bills and coins that should be given to the customer. 			
 //		{System.out.println( payment - cost);} // place holder until formula. step 2  30 dollars
 //		
@@ -42,9 +127,9 @@ public class CashRegister {
 		
 //User Story #3a-Display an appropriate message if the customer provided the exact amount.	//System.out.println("Thank you for your purchase!");
 		
-		}	
+		
 	
-	}
+	
 
 
 	 

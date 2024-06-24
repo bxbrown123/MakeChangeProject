@@ -67,15 +67,10 @@ public class CashRegister {
 			int counter = (int)(changeDue / .01);
 			changeDue -= counter * .01;
 			System.out.println("change due in pennies " + counter );
-		}
-		
-		 
-		 
+		} 
 		 
 		 //{ if (changeDue / 20)                        //the denom answer / 20 then previous answer/ 10	
-		}	
-			
-			
+		}		
 		userInput.close();	
 			
 		}
